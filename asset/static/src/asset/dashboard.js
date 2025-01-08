@@ -1,7 +1,9 @@
 staticUrl = $("#statiUrl").attr("data-url");
 $(document).ready(function () {
     function available_asset_chart(dataSet) {
-        var Asset_available_chart = document.getElementById("assetAvailableChart");
+        var Asset_available_chart = document.getElementById(
+            "assetAvailableChart",
+        );
         if (Asset_available_chart) {
             var assetAvailableChartChart = new Chart(Asset_available_chart, {
                 type: "pie",
@@ -13,7 +15,8 @@ $(document).ready(function () {
                 },
                 plugins: [
                     {
-                        afterRender: (assetAvailableChartChart) => emptyAssetAvialabeChart(assetAvailableChartChart),
+                        afterRender: (assetAvailableChartChart) =>
+                            emptyAssetAvialabeChart(assetAvailableChartChart),
                     },
                 ],
             });
@@ -21,7 +24,8 @@ $(document).ready(function () {
     }
 
     function asset_category_chart(dataSet) {
-        var Asset_category_chart = document.getElementById("assetCategoryChart");
+        var Asset_category_chart =
+            document.getElementById("assetCategoryChart");
         if (Asset_category_chart) {
             var assetCategoryChart = new Chart(Asset_category_chart, {
                 type: "bar",
@@ -33,7 +37,8 @@ $(document).ready(function () {
                 },
                 plugins: [
                     {
-                        afterRender: (assetCategoryChart) => emptyAssetAvialabeChart(assetCategoryChart),
+                        afterRender: (assetCategoryChart) =>
+                            emptyAssetAvialabeChart(assetCategoryChart),
                     },
                 ],
             });
@@ -68,7 +73,8 @@ $(document).ready(function () {
 function emptyAssetAvialabeChart(assetAvailableChartChart, args, options) {
     flag = false;
     for (let i = 0; i < assetAvailableChartChart.data.datasets.length; i++) {
-        flag = flag + assetAvailableChartChart.data.datasets[i].data.some(Boolean);
+        flag =
+            flag + assetAvailableChartChart.data.datasets[i].data.some(Boolean);
     }
     if (!flag) {
         const { ctx, canvas } = assetAvailableChartChart;
@@ -98,7 +104,7 @@ function emptyAssetAvialabeChart(assetAvailableChartChart, args, options) {
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
             ctx.fillStyle = "hsl(0,0%,45%)";
-            ctx.font = "16px Poppins";
+            ctx.font = "16px Inter";
             ctx.fillText(message, x, y + 70 + 30);
         };
     }

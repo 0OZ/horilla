@@ -3,18 +3,15 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-
 /// Regular font family
 /// @type List
-$text-font-stack: 'Poppins', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: "Inter", "Open Sans", "Helvetica Neue Light",
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
-
-
-
-
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+    "Monaco", monospace !default;
 
 /// Copy text color
 /// @type Color
@@ -42,7 +39,7 @@ $sidebar-color: hsl(192, 15%, 94%) !default;
 
 /// Brand color dark
 /// @type Color
-$brand-color-dark:  hsl(245, 100%, 8%)!default;
+$brand-color-dark: hsl(245, 100%, 8%) !default;
 
 /// Secondary color
 /// @type Color
@@ -55,7 +52,6 @@ $secondary-color-dark: hsl(8, 61%, 50%) !default;
 /// White  color
 /// @type Color
 $white-color: hsl(0, 0%, 100%) !default;
-
 
 /// Danger color
 /// @type Color
@@ -72,8 +68,6 @@ $warning-color: hsl(37, 90%, 51%);
 /// Warning dark color
 /// @type Color
 $warning-color-dark: hsl(37, 90%, 47%);
-
-
 
 /// Border color
 /// @type Color
@@ -97,7 +91,7 @@ $table-text-color: hsl(0, 0%, 37%) !default;
 
 /// Light Text color
 /// @type Color
-$light-text-color: hsl(0, 0%, 45%)!default;
+$light-text-color: hsl(0, 0%, 45%) !default;
 
 /// Light button color
 /// @type Color
@@ -170,7 +164,6 @@ $success-color: hsl(148, 71%, 44%) !default;
 /// @type Color
 $success-color-dark: hsl(148, 70%, 40%) !default;
 
-
 /// Alert Colors
 
 /// Danger Bg
@@ -217,29 +210,20 @@ $alert-color-hlt-success: hwb(119 28% 36%) !default;
 /// @type Length
 $max-width: 1180px !default;
 
-
-
-
-
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'x-small': 0px,
-  'small': 576px,
-  'medium': 768px,
-  'large': 992px,
-  'x-large': 1200px,
-  'xx-large': 1400px
+    "x-small": 0px,
+    "small": 576px,
+    "medium": 768px,
+    "large": 992px,
+    "x-large": 1200px,
+    "xx-large": 1400px,
 ) !default;
-
-
-
-
-
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'https://cdn.example.com/assets/';
-$base-url: '/assets/' !default;
+$base-url: "/assets/" !default;
